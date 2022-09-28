@@ -1,1 +1,19 @@
+#include <stdio.h>
+#define _USE_MATH_DEFINES
+#include <math.h>
+
+int main (){
+double T, k, m, M, v, P;
+
+k = 1.38e-23;
+
+printf ("Input in the following order the value of: temperature (Calvine), molar mass of molecule (g/mole), velocity (m/s), then press any digit key+Enter\n");
+scanf ("%lf\n", &T);
+scanf ("%lf\n", &M);
+scanf ("%lf\n", &v);
+m = (M*(powf(10,-3)))/(6.02*(powf(10,23)));
+P = 4*M_PI*v*v*(powf (m/(2*M_PI*k*T), 1.5))*(expf((-1)*m*v*v/(2*k*T)));
+printf ("The density of particle destribution: %g \n", P);
+
+}
 
